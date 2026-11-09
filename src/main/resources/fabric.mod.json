@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "void",
+  "version": "${version}",
+  "name": "VOID Client",
+  "description": "A clean purple client-side HUD and utility interface.",
+  "authors": ["VOID"],
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.void.client.VOIDClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.0",
+    "minecraft": "~26.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
