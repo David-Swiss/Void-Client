@@ -1,4 +1,7 @@
 {
   "key.category.void.main": "VOID Client",
-  "key.void.toggle_menu": "Toggle VOID menu"
+  "key.void.toggle_menu": "Toggle VOID menu",
+  "key.void.toggle_hud": "Toggle VOID HUD",
+  "key.void.toggle_fps": "Toggle FPS counter",
+  "key.void.toggle_coords": "Toggle coordinates"
 }
