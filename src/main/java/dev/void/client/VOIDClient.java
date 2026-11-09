@@ -1,4 +1,4 @@
-package dev.void.client;
+package dev.voidclient;
 
 import com.mojang.blaze3d.platform.InputConstants;
 import net.fabricmc.api.ClientModInitializer;
