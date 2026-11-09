@@ -1,6 +1,7 @@
 package dev.voidclient;
 
 import com.mojang.blaze3d.platform.InputConstants;
+import org.lwjgl.glfw.GLFW;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
@@ -29,10 +30,10 @@ public final class VOIDClient implements ClientModInitializer {
         ));
     }
 
-    private static final KeyMapping TOGGLE_MENU = key("key.void.toggle_menu", InputConstants.KEY_RIGHT_SHIFT);
-    private static final KeyMapping TOGGLE_HUD = key("key.void.toggle_hud", InputConstants.KEY_F8);
-    private static final KeyMapping TOGGLE_FPS = key("key.void.toggle_fps", InputConstants.KEY_F6);
-    private static final KeyMapping TOGGLE_COORDS = key("key.void.toggle_coords", InputConstants.KEY_F7);
+    private static final KeyMapping TOGGLE_MENU = key("key.void.toggle_menu", GLFW.GLFW_KEY_RIGHT_SHIFT);
+    private static final KeyMapping TOGGLE_HUD = key("key.void.toggle_hud", GLFW.GLFW_KEY_F8);
+    private static final KeyMapping TOGGLE_FPS = key("key.void.toggle_fps", GLFW.GLFW_KEY_F6);
+    private static final KeyMapping TOGGLE_COORDS = key("key.void.toggle_coords", GLFW.GLFW_KEY_F7);
 
     @Override
     public void onInitializeClient() {
@@ -50,7 +51,7 @@ public final class VOIDClient implements ClientModInitializer {
 
     private static void renderHud(GuiGraphicsExtractor graphics, DeltaTracker deltaTracker) {
         Minecraft client = Minecraft.getInstance();
-        if (client.player == null || client.options.hideGui) return;
+        if (client.player == null) return;
 
         if (hudEnabled) {
             int x = 8;
